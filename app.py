@@ -107,7 +107,7 @@ def ask(prompt):
 
 ####################
 
-st.title('InterviewPrepGPT')
+st.title('IntervuPro.Ai')
 st.subheader('A tool using to help people prepare their interview by using gpt3.5')
 
 # environment setup
