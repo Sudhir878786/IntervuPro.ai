@@ -3,6 +3,35 @@ import openai
 import streamlit as st
 import fitz
             
+import streamlit as st
+
+def developer_details():
+    st.sidebar.markdown("# Developer Details")
+    
+    developers = [
+        {
+            "name": "Sudhir Sharma",
+            "role": "B.Tech CSE - IIT Bhilai 2024",
+            "email": "sudhirsharma@iitbhilai.ac.in",
+            "github": "https://github.com/Sudhir878786",
+            "linkedin": "https://www.linkedin.com/in/sudhirsharma87/",
+            "avatar": "https://avatars.githubusercontent.com/u/92601949?v=4",  # Replace with actual image URL
+        },
+        # Add more developers if needed
+    ]
+    
+    for developer in developers:
+        st.sidebar.markdown(f"## {developer['name']}")
+        st.sidebar.image(developer['avatar'], width=150)
+        st.sidebar.write(f"**Role:** {developer['role']}")
+        st.sidebar.write(f"**Email:** {developer['email']}")
+        st.sidebar.write(f"**GitHub:** {developer['github']}")
+        st.sidebar.write(f"**LinkedIn:** {developer['linkedin']}")
+        st.sidebar.markdown("---")
+
+# Call the function to display the container in the sidebar
+developer_details()
+
 
 def prompt1(company,position,round,intervier_level):
     prompt=f"""
